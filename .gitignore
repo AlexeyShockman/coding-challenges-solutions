@@ -1,0 +1,12 @@
+# IDE
+.idea/
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.temp
