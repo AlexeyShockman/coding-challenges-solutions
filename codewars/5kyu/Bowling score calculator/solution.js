@@ -1,3 +1,5 @@
+const { compareInConsole } = require('../../../utils/console.js');
+
 function bowlingScore(r) {
     let acc = 0;
     let step = 0;
@@ -26,11 +28,12 @@ function bowlingScore(r) {
     return acc;
 }
 
-
-console.log('expected 0:', bowlingScore([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));
-console.log('expected 10:', bowlingScore([1, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));
-console.log('expected 190:', bowlingScore([9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9]));
-console.log('expected 300:', bowlingScore([10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]));
-console.log('expected 11:', bowlingScore([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 1, 0]));
-console.log('expected 12:', bowlingScore([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 1, 0]));
-console.log('expected 200:', bowlingScore([10, 5, 5, 10, 5, 5, 10, 5, 5, 10, 5, 5, 10, 5, 5, 10]));
+const isNeedToTest = true;
+compareInConsole(0, bowlingScore,[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], isNeedToTest);
+compareInConsole(10, bowlingScore,[1, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], isNeedToTest);
+compareInConsole(190, bowlingScore,[9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9], isNeedToTest);
+compareInConsole(300, bowlingScore,[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10], isNeedToTest);
+compareInConsole(11, bowlingScore,[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 1, 0], isNeedToTest);
+compareInConsole(12, bowlingScore,[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 1, 0], isNeedToTest);
+compareInConsole(200, bowlingScore,[10, 5, 5, 10, 5, 5, 10, 5, 5, 10, 5, 5, 10, 5, 5, 10], isNeedToTest);
+compareInConsole(200, bowlingScore, [10, 5, 5, 10, 5, 5, 10, 5, 5, 10, 5, 5, 10, 5, 5, 10], isNeedToTest);
