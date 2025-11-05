@@ -4,7 +4,7 @@ function compareInConsole(expected, fn, args, isActive = true) {
     const [green, red] = ['\x1b[32m%s\x1b[0m', '\x1b[31m%s\x1b[0m']
 
     try {
-        const result = fn(args);
+        const result = fn(...args);
         const isEqual = deepEqual(result, expected);
         const textColor = isEqual ? green : red
 
