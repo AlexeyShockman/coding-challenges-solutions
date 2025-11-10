@@ -25,7 +25,7 @@ function sqInRectRecursive(l, w) {
     if (l === w) return null;
     if (l < w) [l, w] = [w, l];
 
-    return [w, ...(sqInRectRecursive(l - w, w) || [w])];
+    return [w, ...(sqInRectRecursive(w, l - w) || [w])];
 }
 
 
