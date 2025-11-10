@@ -10,7 +10,7 @@ function compareInConsole(expected, fn, args, isActive = true) {
 
         console.log(textColor ,'\n==============================');
         console.log(textColor, `Function: ${fn.name || '(anonymous)'}`);
-        console.log(textColor, `Args:`, JSON.stringify(...args));
+        console.log(textColor, `Args:`, JSON.stringify(args));
         console.log(textColor, `Expected:`, expected);
         console.log(textColor, `Received:`, result);
 
