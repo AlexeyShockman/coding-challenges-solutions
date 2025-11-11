@@ -1,4 +1,4 @@
-function compareInConsole(expected, fn, args, isActive = true) {
+function compareInConsole(expected, fn, args, isActive = true, comment = '') {
     if (!isActive) return;
 
     const [green, red] = ['\x1b[32m%s\x1b[0m', '\x1b[31m%s\x1b[0m']
@@ -13,6 +13,10 @@ function compareInConsole(expected, fn, args, isActive = true) {
         console.log(textColor, `Args:`, JSON.stringify(args));
         console.log(textColor, `Expected:`, expected);
         console.log(textColor, `Received:`, result);
+
+        if (comment) {
+            console.log(textColor, `Comment:`, comment);
+        }
 
         if (isEqual) {
             console.log(textColor, '✅ Test passed');
