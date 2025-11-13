@@ -9,7 +9,7 @@ function compareInConsole(expected, fn, args, isActive = true, comment = '') {
         const textColor = isEqual ? green : red
 
         console.log(textColor ,'\n==============================');
-        console.log(textColor, `Function: ${fn.name || '(anonymous)'}`);
+        console.log(textColor, `Function:`, (fn.name || '(anonymous)'));
         console.log(textColor, `Args:`, JSON.stringify(args));
         console.log(textColor, `Expected:`, expected);
         console.log(textColor, `Received:`, result);
@@ -19,7 +19,7 @@ function compareInConsole(expected, fn, args, isActive = true, comment = '') {
         }
 
         if (isEqual) {
-            console.log(textColor, '✅ Test passed');
+            console.log(textColor, '✅  Test passed');
         } else {
             console.log(textColor, '❌ Test failed');
         }
