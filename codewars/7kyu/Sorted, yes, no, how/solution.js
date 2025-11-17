@@ -26,7 +26,7 @@ const ANSWERS = {
 }
 
 
-const testIsActive = true;
+const testIsActive = false;
 compareInConsole(ANSWERS.no, isSortedAndHow, [[1, 3, 9, 4]], testIsActive);
 compareInConsole(ANSWERS.no, isSortedAndHow, [[4, 3, 1, 9]], testIsActive);
 compareInConsole(ANSWERS.yesUp, isSortedAndHow, [[1, 2]], testIsActive);
@@ -48,3 +48,7 @@ function isSortedAndHow2(arr) {
     return arr.every((x,i)=>i==0||arr[i]>=arr[i-1])?'yes, ascending':
         arr.every((x,i)=>i==0||arr[i]<=arr[i-1])?'yes, descending':'no'
 }
+
+const testIsActive2 = true;
+compareInConsole(ANSWERS.no, isSortedAndHow2, [[1, 3, 9, 4]], testIsActive2, 'решение от участника codewars');
+compareInConsole(ANSWERS.yesDown, isSortedAndHow2, [[3, 2, 1, 1]], testIsActive2, 'решение от участника codewars');
